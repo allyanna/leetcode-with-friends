@@ -9,12 +9,15 @@ class Solution:
 
         if not root:
             return None
-        # A q for bfs
+
+        # A q for bfs. Level order traversal is what we want. 
         q = collections.deque()
         q.append(root)
 
         while q:
             curr_size = len(q)
+            # Iterate over root, invert and q the children
+            # If None, we don't care.
             for i in range(curr_size):
                 curr = q.popleft()
                 temp = curr.left
