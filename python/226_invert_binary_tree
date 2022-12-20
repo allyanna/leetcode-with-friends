@@ -4,26 +4,29 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:
-    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+# class Solution:
+#     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 
-        if not root:
-            return None
-        # A q for bfs
-        q = collections.deque()
-        q.append(root)
+#         if not root:
+#             return None
+#         # A q for bfs
+#         q = collections.deque()
+#         q.append(root)
 
-        while q:
-            curr_size = len(q)
-            for i in range(curr_size):
-                curr = q.popleft()
-                temp = curr.left
-                curr.left = curr.right
-                curr.right = temp
+#         while q:
+#             curr_size = len(q)
+#             for i in range(curr_size):
+#                 curr = q.popleft()
+#                 temp = curr.left
+#                 curr.left = curr.right
+#                 curr.right = temp
 
-                if curr.left:
-                    q.append(curr.left)
-                if curr.right:
-                    q.append(curr.right)
+#                 if curr.left:
+#                     q.append(curr.left)
+#                 if curr.right:
+#                     q.append(curr.right)
 
-        return root
+#         return root
+
+aset = set()
+print(list(aset))
