@@ -1,5 +1,8 @@
 package MaxAreaOfIsland;
 
-public class test1 {
+public class HelloWorld {
 
+    public static void main(String[] args) {
+
+    }
 }
