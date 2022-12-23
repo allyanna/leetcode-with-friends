@@ -16,9 +16,6 @@ public class Max_Area_of_Island {
     }
 
     public static int maxAreaOfIsland(int[][] grid) {
-
-        // Use depth first search and then use two stacks?
-
         Stack<int[]> stack = new Stack<int[]>();
         int max = 0;
         int current = 0;
@@ -35,16 +32,16 @@ public class Max_Area_of_Island {
                             current++;
                             visited[p[0]][p[1]] = true;
 
-                            if (p[0] + 1 < grid.length && grid[p[0] + 1][p[1]] == 1 && !visited[p[0] + 1][p[1]] && !stack.contains(new int[]{p[0] + 1, p[1]})) {
+                            if (p[0] + 1 < grid.length && grid[p[0] + 1][p[1]] == 1 ) {
                                 stack.push(new int[]{p[0] + 1, p[1]});
                             }
-                            if (p[0] - 1 >= 0 && grid[p[0] - 1][p[1]] == 1 && !visited[p[0] - 1][p[1]] && !stack.contains(new int[]{p[0] - 1, p[1]})) {
+                            if (p[0] - 1 >= 0 && grid[p[0] - 1][p[1]] == 1) {
                                 stack.push(new int[]{p[0] - 1, p[1]});
                             }
-                            if (p[1] + 1 < grid[i].length && grid[p[0]][p[1] + 1] == 1 && !visited[p[0]][p[1] + 1] && !stack.contains(new int[]{p[0], p[1] + 1})) {
+                            if (p[1] + 1 < grid[i].length && grid[p[0]][p[1] + 1] == 1) {
                                 stack.push(new int[]{p[0], p[1] + 1});
                             }
-                            if (p[1] - 1 >= 0 && grid[p[0]][p[1] - 1] == 1 && !visited[p[0]][p[1] - 1] && !stack.contains(new int[]{p[0], p[1] - 1})) {
+                            if (p[1] - 1 >= 0 && grid[p[0]][p[1] - 1] == 1) {
                                 stack.push(new int[]{p[0], p[1] - 1});
                             }
                         }
