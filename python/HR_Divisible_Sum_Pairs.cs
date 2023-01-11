@@ -8,6 +8,5 @@ static int divisibleSumPairs(int n, int k, List<int> ar)
                 if (s%k == 0)
                     pairs++; 
             }
-
         return pairs;
     }
