@@ -12,6 +12,7 @@ class Solution:
 
     """
     @param: str: A string
+    Coolstuf
     @return: dcodes a single string to a list of strings
     """
     def decode(self, str):
